@@ -69,7 +69,13 @@ public class MakeChange {
 			
 		while ( count >= 0) {
 			
-			if (custBalance >= 10) { 
+			if (custBalance >= 20) { 
+				int twentyDollarBill = (int)(custBalance / 20);
+				System.out.println(twentyDollarBill + " twenty dollar bill." );
+				count = custBalance = custBalance % 20;
+				custBalance = (double)Math.round(custBalance * 100d) /100d;
+				
+			}	else if  (custBalance >= 10) { 
 				int tenDollarBill = (int)(custBalance / 10);
 				System.out.println(tenDollarBill + " ten dollar bill." );
 				count = custBalance = custBalance % 10;
